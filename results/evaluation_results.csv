@@ -1,5 +1,5 @@
 prompt_id,agent_id,instruction_score,hallucination_score,composite_score,response
-Explain the concept of quantum entanglement and its implications for quantum computing in simple terms.,agent_gemini_1.5_flash,1.0,0.14,0.93,Quantum entanglement is a bizarre phenomenon where two or more quantum particles become linked toget...
+Explain the concept of quantum entanglement and its implications for quantum computing in simple terms.,agent_gemini_1.5_flash,0.98,0.14,0.92,Quantum entanglement is a bizarre phenomenon where two or more quantum particles become linked toget...
 Describe how transformer architecture works in large language models and why it's effective for natural language processing.,agent_gemini_1.5_flash,1.0,0.14,0.93,"Transformer architecture, unlike recurrent neural networks (RNNs), processes sequential data like te..."
 "What are the main ethical considerations in developing advanced AI systems, and how can we address them?",agent_gemini_1.5_flash,1.0,0.11,0.95,"Developing advanced AI systems presents a complex web of ethical considerations, broadly categorized..."
 "Explain the difference between supervised, unsupervised, and reinforcement learning with practical examples.",agent_gemini_1.5_flash,1.0,0.66,0.67,"The three main categories of machine learning – supervised, unsupervised, and reinforcement learning..."
@@ -13,11 +13,11 @@ Explain the concept of quantum entanglement and its implications for quantum com
 
 **What is Quan..."
 Describe how transformer architecture works in large language models and why it's effective for natural language processing.,agent_gemini_2.0_flash,1.0,0.11,0.95,"Okay, let's break down the transformer architecture and why it's become the dominant force in large ..."
-"What are the main ethical considerations in developing advanced AI systems, and how can we address them?",agent_gemini_2.0_flash,0.99,0.11,0.94,Developing advanced AI systems presents a complex web of ethical considerations that must be address...
+"What are the main ethical considerations in developing advanced AI systems, and how can we address them?",agent_gemini_2.0_flash,1.0,0.11,0.95,Developing advanced AI systems presents a complex web of ethical considerations that must be address...
 "Explain the difference between supervised, unsupervised, and reinforcement learning with practical examples.",agent_gemini_2.0_flash,1.0,0.71,0.65,"Okay, let's break down the differences between supervised, unsupervised, and reinforcement learning,..."
 "How does gradient descent optimization work in neural networks, and what are some common variants like Adam and RMSprop?",agent_gemini_2.0_flash,1.0,0.26,0.87,"Okay, let's break down gradient descent and its popular variants in the context of neural networks.
 ..."
-Describe the CAP theorem in distributed systems and its relevance to modern database design.,agent_gemini_2.0_flash,0.99,0.16,0.92,"Okay, let's break down the CAP theorem and its significance in modern database design.
+Describe the CAP theorem in distributed systems and its relevance to modern database design.,agent_gemini_2.0_flash,1.0,0.16,0.92,"Okay, let's break down the CAP theorem and its significance in modern database design.
 
 **What is th..."
 What are the key challenges in achieving artificial general intelligence (AGI) compared to narrow AI?,agent_gemini_2.0_flash,1.0,0.19,0.91,"Achieving Artificial General Intelligence (AGI), often envisioned as AI with human-level cognitive a..."
@@ -35,7 +35,7 @@ Explain how attention mechanisms improve sequence-to-sequence models and their a
 Describe the concept of transfer learning and how it accelerates model training in deep learning applications.,agent_gemini_2.5_flash,1.0,0.29,0.85,Transfer learning is a powerful and widely adopted technique in deep learning that significantly acc...
 "What are the fundamental differences between symbolic AI and connectionist approaches, and how do they complement each other?",agent_gemini_2.5_flash,1.0,0.59,0.71,"The field of Artificial Intelligence has historically been characterized by two dominant, yet fundam..."
 Explain the concept of quantum entanglement and its implications for quantum computing in simple terms.,agent_gemini_2.5_flash_lite,1.0,0.07,0.96,"Quantum entanglement is a phenomenon where two or more quantum particles become linked, sharing the ..."
-Describe how transformer architecture works in large language models and why it's effective for natural language processing.,agent_gemini_2.5_flash_lite,0.96,0.06,0.95,Transformer architecture uses **self-attention mechanisms** to weigh the importance of different wor...
+Describe how transformer architecture works in large language models and why it's effective for natural language processing.,agent_gemini_2.5_flash_lite,0.93,0.06,0.94,Transformer architecture uses **self-attention mechanisms** to weigh the importance of different wor...
 "What are the main ethical considerations in developing advanced AI systems, and how can we address them?",agent_gemini_2.5_flash_lite,1.0,0.1,0.95,"**Main Ethical Considerations:**
 
 *   **Bias and Fairness:** AI systems can perpetuate or amplify ex..."
@@ -52,15 +52,15 @@ Describe the concept of transfer learning and how it accelerates model training 
 "What are the fundamental differences between symbolic AI and connectionist approaches, and how do they complement each other?",agent_gemini_2.5_flash_lite,1.0,0.09,0.96,"**Symbolic AI:**
 
 *   **Core Idea:** Manipulates explicit symbols and rules to represent knowledge a..."
-Explain the concept of quantum entanglement and its implications for quantum computing in simple terms.,agent_gemini_2.0_flash_lite,1.0,0.11,0.95,"Okay, let's break down quantum entanglement and its role in quantum computing. We'll start with the ..."
+Explain the concept of quantum entanglement and its implications for quantum computing in simple terms.,agent_gemini_2.0_flash_lite,0.99,0.11,0.94,"Okay, let's break down quantum entanglement and its role in quantum computing. We'll start with the ..."
 Describe how transformer architecture works in large language models and why it's effective for natural language processing.,agent_gemini_2.0_flash_lite,1.0,0.08,0.96,"Okay, let's dive deep into the transformer architecture, the backbone of modern large language model..."
 "What are the main ethical considerations in developing advanced AI systems, and how can we address them?",agent_gemini_2.0_flash_lite,1.0,0.09,0.96,"Okay, let's delve into the complex and crucial ethical considerations surrounding the development of..."
 "Explain the difference between supervised, unsupervised, and reinforcement learning with practical examples.",agent_gemini_2.0_flash_lite,1.0,0.46,0.77,"Okay, let's break down the core differences between supervised, unsupervised, and reinforcement lear..."
-"How does gradient descent optimization work in neural networks, and what are some common variants like Adam and RMSprop?",agent_gemini_2.0_flash_lite,1.0,0.49,0.76,"Okay, let's dive deep into the fascinating world of gradient descent optimization in neural networks..."
-Describe the CAP theorem in distributed systems and its relevance to modern database design.,agent_gemini_2.0_flash_lite,1.0,0.06,0.97,"Okay, let's dive into the CAP theorem and its profound impact on modern database design.
+"How does gradient descent optimization work in neural networks, and what are some common variants like Adam and RMSprop?",agent_gemini_2.0_flash_lite,0.99,0.49,0.75,"Okay, let's dive deep into the fascinating world of gradient descent optimization in neural networks..."
+Describe the CAP theorem in distributed systems and its relevance to modern database design.,agent_gemini_2.0_flash_lite,0.98,0.06,0.96,"Okay, let's dive into the CAP theorem and its profound impact on modern database design.
 
 **What is ..."
-What are the key challenges in achieving artificial general intelligence (AGI) compared to narrow AI?,agent_gemini_2.0_flash_lite,1.0,0.13,0.94,"## Key Challenges in Achieving Artificial General Intelligence (AGI) Compared to Narrow AI
+What are the key challenges in achieving artificial general intelligence (AGI) compared to narrow AI?,agent_gemini_2.0_flash_lite,0.99,0.13,0.93,"## Key Challenges in Achieving Artificial General Intelligence (AGI) Compared to Narrow AI
 
 Achievin..."
 Explain how attention mechanisms improve sequence-to-sequence models and their applications beyond NLP.,agent_gemini_2.0_flash_lite,1.0,0.09,0.96,"Okay, let's dive into attention mechanisms and their impact on sequence-to-sequence models, along wi..."

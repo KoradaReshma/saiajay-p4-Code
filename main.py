@@ -64,9 +64,9 @@ def generate_report(results_df):
     """Generate a simple HTML report."""
     # Group by agent and calculate averages
     agent_report = results_df.groupby('agent_id').agg({
-        'score': 'mean',
+        'composite_score': 'mean',
         'hallucination_score': 'mean',
-        'composite_score': 'mean'
+        'instruction_score': 'mean'
     }).round(2)
     
     # Create HTML report
