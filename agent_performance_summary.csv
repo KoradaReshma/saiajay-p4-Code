@@ -1,0 +1,6 @@
+agent_id,model_name,success_rate,avg_response_time_seconds,total_questions
+agent_gemini_1.5_flash,gemini-1.5-flash,1.0,6.686,10
+agent_gemini_2.0_flash,gemini-2.0-flash,1.0,11.971,10
+agent_gemini_2.0_flash_lite,gemini-2.0-flash-lite,1.0,18.302,10
+agent_gemini_2.5_flash,gemini-2.5-flash,1.0,40.942,10
+agent_gemini_2.5_flash_lite,gemini-2.5-flash-lite,1.0,2.934,10

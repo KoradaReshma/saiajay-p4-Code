@@ -1,0 +1,11 @@
+# requirements.txt
+langchain
+python-dotenv
+pandas
+matplotlib
+seaborn
+asyncio
+sentence-transformers 
+scipy
+transformers
+langchain_community
