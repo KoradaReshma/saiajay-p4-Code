@@ -12,19 +12,21 @@
     </head>
     <body>
         <h1>AI Agent Evaluation Report</h1>
-        <p>Evaluated 50 responses across 5 agents</p>
+        <p>Evaluated 45 responses across 5 agents</p>
         
-        <h2>Agent Performance Summary</h2>
+        <h2>Agent Performance Summary (Sorted by Composite Score)</h2>
         <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>composite_score</th>
+      <th>correctness_score</th>
       <th>hallucination_score</th>
       <th>instruction_score</th>
+      <th>composite_score</th>
     </tr>
     <tr>
       <th>agent_id</th>
+      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -32,34 +34,39 @@
   </thead>
   <tbody>
     <tr>
-      <th>agent_gemini_1.5_flash</th>
-      <td>0.90</td>
-      <td>0.19</td>
-      <td>1.00</td>
+      <th>agent_gemini_2.5_flash</th>
+      <td>0.8837</td>
+      <td>0.0768</td>
+      <td>1.0000</td>
+      <td>0.9517</td>
     </tr>
     <tr>
       <th>agent_gemini_2.0_flash</th>
-      <td>0.86</td>
-      <td>0.28</td>
-      <td>1.00</td>
-    </tr>
-    <tr>
-      <th>agent_gemini_2.0_flash_lite</th>
-      <td>0.91</td>
-      <td>0.18</td>
-      <td>0.99</td>
-    </tr>
-    <tr>
-      <th>agent_gemini_2.5_flash</th>
-      <td>0.88</td>
-      <td>0.24</td>
-      <td>1.00</td>
+      <td>0.8512</td>
+      <td>0.0837</td>
+      <td>1.0000</td>
+      <td>0.9419</td>
     </tr>
     <tr>
       <th>agent_gemini_2.5_flash_lite</th>
-      <td>0.94</td>
-      <td>0.11</td>
-      <td>0.99</td>
+      <td>0.8305</td>
+      <td>0.0918</td>
+      <td>1.0000</td>
+      <td>0.9347</td>
+    </tr>
+    <tr>
+      <th>agent_gemini_2.0_flash_lite</th>
+      <td>0.6806</td>
+      <td>0.0813</td>
+      <td>0.9956</td>
+      <td>0.8976</td>
+    </tr>
+    <tr>
+      <th>agent_gemini_1.5_flash</th>
+      <td>0.6620</td>
+      <td>0.0809</td>
+      <td>1.0000</td>
+      <td>0.8953</td>
     </tr>
   </tbody>
 </table>
@@ -72,6 +79,7 @@
       <th>agent_id</th>
       <th>instruction_score</th>
       <th>hallucination_score</th>
+      <th>correctness_score</th>
       <th>composite_score</th>
       <th>response</th>
     </tr>
@@ -80,401 +88,406 @@
     <tr>
       <td>Explain the concept of quantum entanglement and its implications for quantum computing in simple terms.</td>
       <td>agent_gemini_1.5_flash</td>
-      <td>0.98</td>
-      <td>0.14</td>
-      <td>0.92</td>
+      <td>1.00</td>
+      <td>0.1252</td>
+      <td>0.635027</td>
+      <td>0.8775</td>
       <td>Quantum entanglement is a bizarre phenomenon where two or more quantum particles become linked toget...</td>
     </tr>
     <tr>
       <td>Describe how transformer architecture works in large language models and why it's effective for natural language processing.</td>
       <td>agent_gemini_1.5_flash</td>
       <td>1.00</td>
-      <td>0.14</td>
-      <td>0.93</td>
+      <td>0.0726</td>
+      <td>0.839133</td>
+      <td>0.9416</td>
       <td>Transformer architecture, unlike recurrent neural networks (RNNs), processes sequential data like te...</td>
-    </tr>
-    <tr>
-      <td>What are the main ethical considerations in developing advanced AI systems, and how can we address them?</td>
-      <td>agent_gemini_1.5_flash</td>
-      <td>1.00</td>
-      <td>0.11</td>
-      <td>0.95</td>
-      <td>Developing advanced AI systems presents a complex web of ethical considerations, broadly categorized...</td>
     </tr>
     <tr>
       <td>Explain the difference between supervised, unsupervised, and reinforcement learning with practical examples.</td>
       <td>agent_gemini_1.5_flash</td>
       <td>1.00</td>
-      <td>0.66</td>
-      <td>0.67</td>
-      <td>The three main categories of machine learning – supervised, unsupervised, and reinforcement learning...</td>
+      <td>0.1091</td>
+      <td>0.764299</td>
+      <td>0.9138</td>
+      <td>The three main categories of machine learning ï¿½ supervised, unsupervised, and reinforcement learning...</td>
     </tr>
     <tr>
       <td>How does gradient descent optimization work in neural networks, and what are some common variants like Adam and RMSprop?</td>
       <td>agent_gemini_1.5_flash</td>
       <td>1.00</td>
-      <td>0.39</td>
-      <td>0.80</td>
+      <td>0.0898</td>
+      <td>0.792879</td>
+      <td>0.9258</td>
       <td>Gradient descent is an iterative optimization algorithm used to find the minimum of a function. In t...</td>
     </tr>
     <tr>
       <td>Describe the CAP theorem in distributed systems and its relevance to modern database design.</td>
       <td>agent_gemini_1.5_flash</td>
       <td>1.00</td>
-      <td>0.08</td>
-      <td>0.96</td>
+      <td>0.0742</td>
+      <td>0.363786</td>
+      <td>0.8224</td>
       <td>The CAP theorem, also known as Brewer's theorem, states that in a distributed data store, it is impo...</td>
     </tr>
     <tr>
       <td>What are the key challenges in achieving artificial general intelligence (AGI) compared to narrow AI?</td>
       <td>agent_gemini_1.5_flash</td>
       <td>1.00</td>
-      <td>0.17</td>
-      <td>0.92</td>
+      <td>0.0820</td>
+      <td>0.502402</td>
+      <td>0.8551</td>
       <td>The challenges in achieving Artificial General Intelligence (AGI) are significantly more complex tha...</td>
     </tr>
     <tr>
       <td>Explain how attention mechanisms improve sequence-to-sequence models and their applications beyond NLP.</td>
       <td>agent_gemini_1.5_flash</td>
       <td>1.00</td>
-      <td>0.09</td>
-      <td>0.96</td>
+      <td>0.0507</td>
+      <td>0.698809</td>
+      <td>0.9120</td>
       <td>Attention mechanisms significantly enhance sequence-to-sequence (seq2seq) models by addressing their...</td>
     </tr>
     <tr>
       <td>Describe the concept of transfer learning and how it accelerates model training in deep learning applications.</td>
       <td>agent_gemini_1.5_flash</td>
       <td>1.00</td>
-      <td>0.06</td>
-      <td>0.97</td>
+      <td>0.0496</td>
+      <td>0.624693</td>
+      <td>0.8938</td>
       <td>Transfer learning is a machine learning technique where a pre-trained model, developed for a specifi...</td>
     </tr>
     <tr>
       <td>What are the fundamental differences between symbolic AI and connectionist approaches, and how do they complement each other?</td>
       <td>agent_gemini_1.5_flash</td>
       <td>1.00</td>
-      <td>0.06</td>
-      <td>0.97</td>
+      <td>0.0747</td>
+      <td>0.737217</td>
+      <td>0.9156</td>
       <td>Symbolic AI and connectionist approaches represent fundamentally different paradigms in artificial i...</td>
     </tr>
     <tr>
       <td>Explain the concept of quantum entanglement and its implications for quantum computing in simple terms.</td>
       <td>agent_gemini_2.0_flash</td>
       <td>1.00</td>
-      <td>0.15</td>
-      <td>0.93</td>
+      <td>0.1051</td>
+      <td>0.687971</td>
+      <td>0.8957</td>
       <td>Okay, let's break down quantum entanglement and its importance in quantum computing.\n\n**What is Quan...</td>
     </tr>
     <tr>
       <td>Describe how transformer architecture works in large language models and why it's effective for natural language processing.</td>
       <td>agent_gemini_2.0_flash</td>
       <td>1.00</td>
-      <td>0.11</td>
-      <td>0.95</td>
+      <td>0.0533</td>
+      <td>0.896528</td>
+      <td>0.9608</td>
       <td>Okay, let's break down the transformer architecture and why it's become the dominant force in large ...</td>
-    </tr>
-    <tr>
-      <td>What are the main ethical considerations in developing advanced AI systems, and how can we address them?</td>
-      <td>agent_gemini_2.0_flash</td>
-      <td>1.00</td>
-      <td>0.11</td>
-      <td>0.95</td>
-      <td>Developing advanced AI systems presents a complex web of ethical considerations that must be address...</td>
     </tr>
     <tr>
       <td>Explain the difference between supervised, unsupervised, and reinforcement learning with practical examples.</td>
       <td>agent_gemini_2.0_flash</td>
       <td>1.00</td>
-      <td>0.71</td>
-      <td>0.65</td>
+      <td>0.0995</td>
+      <td>0.901958</td>
+      <td>0.9506</td>
       <td>Okay, let's break down the differences between supervised, unsupervised, and reinforcement learning,...</td>
     </tr>
     <tr>
       <td>How does gradient descent optimization work in neural networks, and what are some common variants like Adam and RMSprop?</td>
       <td>agent_gemini_2.0_flash</td>
       <td>1.00</td>
-      <td>0.26</td>
-      <td>0.87</td>
+      <td>0.1010</td>
+      <td>0.935623</td>
+      <td>0.9587</td>
       <td>Okay, let's break down gradient descent and its popular variants in the context of neural networks.\n...</td>
     </tr>
     <tr>
       <td>Describe the CAP theorem in distributed systems and its relevance to modern database design.</td>
       <td>agent_gemini_2.0_flash</td>
       <td>1.00</td>
-      <td>0.16</td>
-      <td>0.92</td>
+      <td>0.0542</td>
+      <td>0.855585</td>
+      <td>0.9503</td>
       <td>Okay, let's break down the CAP theorem and its significance in modern database design.\n\n**What is th...</td>
     </tr>
     <tr>
       <td>What are the key challenges in achieving artificial general intelligence (AGI) compared to narrow AI?</td>
       <td>agent_gemini_2.0_flash</td>
       <td>1.00</td>
-      <td>0.19</td>
-      <td>0.91</td>
+      <td>0.1137</td>
+      <td>0.730575</td>
+      <td>0.9042</td>
       <td>Achieving Artificial General Intelligence (AGI), often envisioned as AI with human-level cognitive a...</td>
     </tr>
     <tr>
       <td>Explain how attention mechanisms improve sequence-to-sequence models and their applications beyond NLP.</td>
       <td>agent_gemini_2.0_flash</td>
       <td>1.00</td>
-      <td>0.25</td>
-      <td>0.88</td>
+      <td>0.0683</td>
+      <td>0.911706</td>
+      <td>0.9609</td>
       <td>Okay, let's break down how attention mechanisms enhance sequence-to-sequence models and explore thei...</td>
     </tr>
     <tr>
       <td>Describe the concept of transfer learning and how it accelerates model training in deep learning applications.</td>
       <td>agent_gemini_2.0_flash</td>
       <td>1.00</td>
-      <td>0.12</td>
-      <td>0.94</td>
+      <td>0.0722</td>
+      <td>0.795036</td>
+      <td>0.9307</td>
       <td>Okay, let's break down the concept of transfer learning and how it speeds up model training in deep ...</td>
     </tr>
     <tr>
       <td>What are the fundamental differences between symbolic AI and connectionist approaches, and how do they complement each other?</td>
       <td>agent_gemini_2.0_flash</td>
       <td>1.00</td>
-      <td>0.74</td>
-      <td>0.63</td>
+      <td>0.0858</td>
+      <td>0.946096</td>
+      <td>0.9651</td>
       <td>Okay, let's break down the fundamental differences between symbolic AI and connectionist approaches,...</td>
     </tr>
     <tr>
       <td>Explain the concept of quantum entanglement and its implications for quantum computing in simple terms.</td>
       <td>agent_gemini_2.5_flash</td>
       <td>1.00</td>
-      <td>0.31</td>
-      <td>0.84</td>
+      <td>0.1196</td>
+      <td>0.665972</td>
+      <td>0.8866</td>
       <td>Quantum entanglement is one of the most mind-bending and powerful concepts in quantum mechanics, oft...</td>
     </tr>
     <tr>
       <td>Describe how transformer architecture works in large language models and why it's effective for natural language processing.</td>
       <td>agent_gemini_2.5_flash</td>
       <td>1.00</td>
-      <td>0.07</td>
-      <td>0.96</td>
+      <td>0.0676</td>
+      <td>0.898755</td>
+      <td>0.9578</td>
       <td>The Transformer architecture has fundamentally reshaped the field of Natural Language Processing (NL...</td>
-    </tr>
-    <tr>
-      <td>What are the main ethical considerations in developing advanced AI systems, and how can we address them?</td>
-      <td>agent_gemini_2.5_flash</td>
-      <td>1.00</td>
-      <td>0.11</td>
-      <td>0.95</td>
-      <td>The development of advanced AI systems presents humanity with unprecedented opportunities, from solv...</td>
     </tr>
     <tr>
       <td>Explain the difference between supervised, unsupervised, and reinforcement learning with practical examples.</td>
       <td>agent_gemini_2.5_flash</td>
       <td>1.00</td>
-      <td>0.50</td>
-      <td>0.75</td>
+      <td>0.1219</td>
+      <td>0.891460</td>
+      <td>0.9424</td>
       <td>Machine learning, a powerful subset of Artificial Intelligence, enables systems to learn from data w...</td>
     </tr>
     <tr>
       <td>How does gradient descent optimization work in neural networks, and what are some common variants like Adam and RMSprop?</td>
       <td>agent_gemini_2.5_flash</td>
       <td>1.00</td>
-      <td>0.21</td>
-      <td>0.90</td>
+      <td>0.0851</td>
+      <td>0.933766</td>
+      <td>0.9622</td>
       <td>Gradient Descent is the cornerstone optimization algorithm for training neural networks. Its fundame...</td>
     </tr>
     <tr>
       <td>Describe the CAP theorem in distributed systems and its relevance to modern database design.</td>
       <td>agent_gemini_2.5_flash</td>
       <td>1.00</td>
-      <td>0.09</td>
-      <td>0.96</td>
+      <td>0.0530</td>
+      <td>0.848769</td>
+      <td>0.9489</td>
       <td>The CAP theorem is a fundamental principle in distributed systems that dictates the trade-offs syste...</td>
     </tr>
     <tr>
       <td>What are the key challenges in achieving artificial general intelligence (AGI) compared to narrow AI?</td>
       <td>agent_gemini_2.5_flash</td>
       <td>1.00</td>
-      <td>0.10</td>
-      <td>0.95</td>
+      <td>0.1282</td>
+      <td>0.762571</td>
+      <td>0.9086</td>
       <td>The pursuit of Artificial General Intelligence (AGI) represents one of the most profound scientific ...</td>
     </tr>
     <tr>
       <td>Explain how attention mechanisms improve sequence-to-sequence models and their applications beyond NLP.</td>
       <td>agent_gemini_2.5_flash</td>
       <td>1.00</td>
-      <td>0.11</td>
-      <td>0.95</td>
+      <td>0.0911</td>
+      <td>0.706929</td>
+      <td>0.9040</td>
       <td>Attention mechanisms have revolutionized sequence-to-sequence (Seq2Seq) models, fundamentally improv...</td>
     </tr>
     <tr>
       <td>Describe the concept of transfer learning and how it accelerates model training in deep learning applications.</td>
       <td>agent_gemini_2.5_flash</td>
       <td>1.00</td>
-      <td>0.29</td>
-      <td>0.85</td>
+      <td>0.0835</td>
+      <td>0.843579</td>
+      <td>0.9400</td>
       <td>Transfer learning is a powerful and widely adopted technique in deep learning that significantly acc...</td>
     </tr>
     <tr>
       <td>What are the fundamental differences between symbolic AI and connectionist approaches, and how do they complement each other?</td>
       <td>agent_gemini_2.5_flash</td>
       <td>1.00</td>
-      <td>0.59</td>
-      <td>0.71</td>
+      <td>0.0760</td>
+      <td>0.922717</td>
+      <td>0.9617</td>
       <td>The field of Artificial Intelligence has historically been characterized by two dominant, yet fundam...</td>
     </tr>
     <tr>
       <td>Explain the concept of quantum entanglement and its implications for quantum computing in simple terms.</td>
       <td>agent_gemini_2.5_flash_lite</td>
       <td>1.00</td>
-      <td>0.07</td>
-      <td>0.96</td>
+      <td>0.0930</td>
+      <td>0.856257</td>
+      <td>0.9408</td>
       <td>Quantum entanglement is a phenomenon where two or more quantum particles become linked, sharing the ...</td>
     </tr>
     <tr>
       <td>Describe how transformer architecture works in large language models and why it's effective for natural language processing.</td>
       <td>agent_gemini_2.5_flash_lite</td>
-      <td>0.93</td>
-      <td>0.06</td>
-      <td>0.94</td>
+      <td>0.96</td>
+      <td>0.0775</td>
+      <td>0.791580</td>
+      <td>0.9085</td>
       <td>Transformer architecture uses **self-attention mechanisms** to weigh the importance of different wor...</td>
-    </tr>
-    <tr>
-      <td>What are the main ethical considerations in developing advanced AI systems, and how can we address them?</td>
-      <td>agent_gemini_2.5_flash_lite</td>
-      <td>1.00</td>
-      <td>0.10</td>
-      <td>0.95</td>
-      <td>**Main Ethical Considerations:**\n\n*   **Bias and Fairness:** AI systems can perpetuate or amplify ex...</td>
     </tr>
     <tr>
       <td>Explain the difference between supervised, unsupervised, and reinforcement learning with practical examples.</td>
       <td>agent_gemini_2.5_flash_lite</td>
       <td>1.00</td>
-      <td>0.09</td>
-      <td>0.96</td>
+      <td>0.0837</td>
+      <td>0.563871</td>
+      <td>0.8700</td>
       <td>**Supervised Learning:** Learns from labeled data (input-output pairs).\n\n*   **Example:** Training a...</td>
     </tr>
     <tr>
       <td>How does gradient descent optimization work in neural networks, and what are some common variants like Adam and RMSprop?</td>
       <td>agent_gemini_2.5_flash_lite</td>
       <td>1.00</td>
-      <td>0.13</td>
-      <td>0.94</td>
+      <td>0.1123</td>
+      <td>0.419698</td>
+      <td>0.8268</td>
       <td>Gradient descent minimizes a neural network's loss function by iteratively adjusting weights and bia...</td>
     </tr>
     <tr>
       <td>Describe the CAP theorem in distributed systems and its relevance to modern database design.</td>
       <td>agent_gemini_2.5_flash_lite</td>
       <td>1.00</td>
-      <td>0.05</td>
-      <td>0.97</td>
+      <td>0.0501</td>
+      <td>0.736276</td>
+      <td>0.9215</td>
       <td>The CAP theorem states that a distributed data store cannot simultaneously provide more than two out...</td>
     </tr>
     <tr>
       <td>What are the key challenges in achieving artificial general intelligence (AGI) compared to narrow AI?</td>
       <td>agent_gemini_2.5_flash_lite</td>
       <td>1.00</td>
-      <td>0.07</td>
-      <td>0.96</td>
+      <td>0.0885</td>
+      <td>0.624195</td>
+      <td>0.8839</td>
       <td>Key challenges in achieving AGI vs. narrow AI include:\n\n*   **Generalization &amp; Transfer Learning:** ...</td>
     </tr>
     <tr>
       <td>Explain how attention mechanisms improve sequence-to-sequence models and their applications beyond NLP.</td>
       <td>agent_gemini_2.5_flash_lite</td>
       <td>1.00</td>
-      <td>0.38</td>
-      <td>0.81</td>
+      <td>0.1000</td>
+      <td>0.742152</td>
+      <td>0.9105</td>
       <td>Attention mechanisms allow sequence-to-sequence models to **focus on relevant parts of the input seq...</td>
     </tr>
     <tr>
       <td>Describe the concept of transfer learning and how it accelerates model training in deep learning applications.</td>
       <td>agent_gemini_2.5_flash_lite</td>
       <td>1.00</td>
-      <td>0.03</td>
-      <td>0.98</td>
+      <td>0.0476</td>
+      <td>0.777665</td>
+      <td>0.9325</td>
       <td>Transfer learning is a deep learning technique where a model trained on one task is **repurposed** f...</td>
     </tr>
     <tr>
       <td>What are the fundamental differences between symbolic AI and connectionist approaches, and how do they complement each other?</td>
       <td>agent_gemini_2.5_flash_lite</td>
       <td>1.00</td>
-      <td>0.09</td>
-      <td>0.96</td>
+      <td>0.0789</td>
+      <td>0.614033</td>
+      <td>0.8838</td>
       <td>**Symbolic AI:**\n\n*   **Core Idea:** Manipulates explicit symbols and rules to represent knowledge a...</td>
     </tr>
     <tr>
       <td>Explain the concept of quantum entanglement and its implications for quantum computing in simple terms.</td>
       <td>agent_gemini_2.0_flash_lite</td>
-      <td>0.99</td>
-      <td>0.11</td>
-      <td>0.94</td>
+      <td>1.00</td>
+      <td>0.0886</td>
+      <td>0.794746</td>
+      <td>0.9265</td>
       <td>Okay, let's break down quantum entanglement and its role in quantum computing. We'll start with the ...</td>
     </tr>
     <tr>
       <td>Describe how transformer architecture works in large language models and why it's effective for natural language processing.</td>
       <td>agent_gemini_2.0_flash_lite</td>
       <td>1.00</td>
-      <td>0.08</td>
-      <td>0.96</td>
+      <td>0.0815</td>
+      <td>0.941677</td>
+      <td>0.9650</td>
       <td>Okay, let's dive deep into the transformer architecture, the backbone of modern large language model...</td>
-    </tr>
-    <tr>
-      <td>What are the main ethical considerations in developing advanced AI systems, and how can we address them?</td>
-      <td>agent_gemini_2.0_flash_lite</td>
-      <td>1.00</td>
-      <td>0.09</td>
-      <td>0.96</td>
-      <td>Okay, let's delve into the complex and crucial ethical considerations surrounding the development of...</td>
     </tr>
     <tr>
       <td>Explain the difference between supervised, unsupervised, and reinforcement learning with practical examples.</td>
       <td>agent_gemini_2.0_flash_lite</td>
       <td>1.00</td>
-      <td>0.46</td>
-      <td>0.77</td>
+      <td>0.0827</td>
+      <td>0.943299</td>
+      <td>0.9651</td>
       <td>Okay, let's break down the core differences between supervised, unsupervised, and reinforcement lear...</td>
     </tr>
     <tr>
       <td>How does gradient descent optimization work in neural networks, and what are some common variants like Adam and RMSprop?</td>
       <td>agent_gemini_2.0_flash_lite</td>
-      <td>0.99</td>
-      <td>0.49</td>
-      <td>0.75</td>
+      <td>1.00</td>
+      <td>0.0830</td>
+      <td>0.925468</td>
+      <td>0.9606</td>
       <td>Okay, let's dive deep into the fascinating world of gradient descent optimization in neural networks...</td>
     </tr>
     <tr>
       <td>Describe the CAP theorem in distributed systems and its relevance to modern database design.</td>
       <td>agent_gemini_2.0_flash_lite</td>
-      <td>0.98</td>
-      <td>0.06</td>
-      <td>0.96</td>
+      <td>1.00</td>
+      <td>0.0673</td>
+      <td>0.784561</td>
+      <td>0.9293</td>
       <td>Okay, let's dive into the CAP theorem and its profound impact on modern database design.\n\n**What is ...</td>
     </tr>
     <tr>
       <td>What are the key challenges in achieving artificial general intelligence (AGI) compared to narrow AI?</td>
       <td>agent_gemini_2.0_flash_lite</td>
-      <td>0.99</td>
-      <td>0.13</td>
-      <td>0.93</td>
+      <td>1.00</td>
+      <td>0.0729</td>
+      <td>0.853690</td>
+      <td>0.9452</td>
       <td>## Key Challenges in Achieving Artificial General Intelligence (AGI) Compared to Narrow AI\n\nAchievin...</td>
     </tr>
     <tr>
       <td>Explain how attention mechanisms improve sequence-to-sequence models and their applications beyond NLP.</td>
       <td>agent_gemini_2.0_flash_lite</td>
       <td>1.00</td>
-      <td>0.09</td>
-      <td>0.96</td>
+      <td>0.0730</td>
+      <td>0.938618</td>
+      <td>0.9664</td>
       <td>Okay, let's dive into attention mechanisms and their impact on sequence-to-sequence models, along wi...</td>
     </tr>
     <tr>
       <td>Describe the concept of transfer learning and how it accelerates model training in deep learning applications.</td>
       <td>agent_gemini_2.0_flash_lite</td>
       <td>1.00</td>
-      <td>0.06</td>
-      <td>0.97</td>
+      <td>0.0501</td>
+      <td>0.845668</td>
+      <td>0.9489</td>
       <td>Okay, let's delve into the concept of transfer learning and how it significantly accelerates model t...</td>
     </tr>
     <tr>
       <td>What are the fundamental differences between symbolic AI and connectionist approaches, and how do they complement each other?</td>
       <td>agent_gemini_2.0_flash_lite</td>
       <td>1.00</td>
-      <td>0.20</td>
-      <td>0.90</td>
+      <td>0.0921</td>
+      <td>0.925139</td>
+      <td>0.9583</td>
       <td>Okay, let's delve into the fundamental differences between symbolic AI and connectionist AI, and the...</td>
     </tr>
   </tbody>

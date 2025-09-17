@@ -37,14 +37,14 @@ def process_batch(data_batch):
     results = []
     
     for entry in tqdm(data_batch, desc="Processing responses"):
+        if entry['question'] == "What are the main ethical considerations in developing advanced AI systems, and how can we address them?":
+            continue
         prompt = entry['question']
         response = entry['answer']
         
         # Score each dimension
         instruction_score = score_instruction_following(prompt, response)
-        hallucination_score = score_hallucination(prompt, response)
-        
-        # For prototype, we'll simplify other scores
+        hallucination_score,correctness_score = score_hallucination(prompt, response)
 
         
         result = {
@@ -52,8 +52,8 @@ def process_batch(data_batch):
             'agent_id': entry['agent_id'],
             'instruction_score': instruction_score,
             'hallucination_score': hallucination_score,
-            
-            'composite_score': round((instruction_score + (1 - hallucination_score) ) / 2, 2),
+            'correctness_score' : correctness_score,
+            'composite_score': round((instruction_score*0.5+correctness_score*0.25 + (1 - hallucination_score)*0.25 ) , 4),
             'response': response[:100] + "..." if len(response) > 100 else response  # Preview
         }
         results.append(result)
@@ -64,10 +64,14 @@ def generate_report(results_df):
     """Generate a simple HTML report."""
     # Group by agent and calculate averages
     agent_report = results_df.groupby('agent_id').agg({
-        'composite_score': 'mean',
+        'correctness_score' : 'mean',
         'hallucination_score': 'mean',
-        'instruction_score': 'mean'
-    }).round(2)
+        'instruction_score': 'mean',
+        'composite_score': 'mean',
+    }).round(4)
+    
+    # Sort agents by composite_score in descending order
+    agent_report = agent_report.sort_values(by='composite_score', ascending=False)
     
     # Create HTML report
     html_content = f"""
@@ -86,7 +90,7 @@ def generate_report(results_df):
         <h1>AI Agent Evaluation Report</h1>
         <p>Evaluated {len(results_df)} responses across {len(agent_report)} agents</p>
         
-        <h2>Agent Performance Summary</h2>
+        <h2>Agent Performance Summary (Sorted by Composite Score)</h2>
         {agent_report.to_html()}
         
         <h2>Detailed Results</h2>
@@ -101,6 +105,7 @@ def generate_report(results_df):
         f.write(html_content)
     
     print(f"Report generated: {REPORT_PATH}")
+
 
 def main():
    
